@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexuality Reader</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+</head>
+
+<body id="shadowBox">
+    <!--
+Source - https://stackoverflow.com/a/54702294
+Posted by Austen Holland, modified by community. See post 'Timeline' for change history
+Retrieved 2026-03-09, License - CC BY-SA 4.0
+-->
+
+<div id="shadowBox">
+    <h1 class="rainbow rainbow_text_animated">Are You Sexually Confused?</h1>
+    <h5>Let a <i>complex</i> machine learning algorithm tell you your sexuality! Tired of people putting you in boxes? Too bad!! Based on a probably biased dataset very carefully curated by yours truly, get 100000% accurate results because when are computers ever wrong???</h5>
+    <div id="webcam-container"></div>
+    <button id="myBtn" class="button--netscape" type="button" style="text-align: center;">Do I have to?</button>
+</div>
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body"></div>
+        <div id='prog-bar-cont'>
+            <div id="prog-bar">
+              <div id="background"></div>
+            </div>
+        </div>
+        <div id="Gay" style="display: none;" class="sexuality">
+            <h1 class="rainbow rainbow_text_animated">CONGRATS!</h1>
+            <br>
+            <img src="imgs/gay.gif" width="400">
+            <audio id="GayAudio" src="audio/Gay.mp3" preload="auto"></audio>
+        </div>
+        <div id="Straight" style="display: none; font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;" class="sexuality">
+            <h1>Oh...</h1>
+            <br>
+            <img src="imgs/straight.gif" width="500">
+            <audio id="StraightAudio" src="audio/Straight.mp3" preload="auto"></audio>
+            <br>
+            <p>It's not bad, but definitely basic. Do better ¯\_(ツ)_/¯</p>
+            <p>- me</p>
+        </div>
+        <div id="Bisexual" style="display: none; font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;" class="sexuality">
+            <h1>Signs Point To:</h1>
+            <br>
+            <img src="imgs/bisexual.png" width="400">
+            <audio id="BisexualAudio" src="audio/Bisexual.mp3" preload="auto"></audio>
+            <br>
+            <p>"And shout out to the bis, you ain't gotta pick a side nope"</p>
+            <p>- cupcakKe</p>
+        </div>
+        <div id="label-container" style="display: none;">
+            <p>Boring Details:</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+:root {
+    /* Project Colors */
+    --color-cod-gray: #111;
+    --color-seashell: #f1f1f1;
+    --color-silver: #ccc;
+    --color-white: #fff;
+    --color-gallery: #eee;
+    --color-mercury: #e6e6e6;
+    --color-shalimar: #fff9c0;
+    --color-jelly-bean: #21759b;
+    --color-dove-gray: #666;
+    --color-royal-blue: #4169e1;
+    --color-fresh-eggplant: #800080;
+    --color-lucky-point: #191970;
+    --color-tundora: #404040;
+    --color-black: #000;
+
+    --c-background-button-netscape: var(--color-silver);
+    --c-link: blue;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    background:
+        repeating-linear-gradient(to right,
+            transparent 0px,
+            transparent 50px,
+            red 49px,
+            orange 50px,
+            yellow 51px,
+            green 52px,
+            blue 53px,
+            indigo 54px,
+            violet 55px),
+        repeating-linear-gradient(to bottom,
+            transparent 0px,
+            transparent 50px,
+            red 51px,
+            orange 50px,
+            yellow 50px,
+            green 52px,
+            blue 53px,
+            indigo 54px,
+            violet 55px);
+
+    background-color: #31239d;
+}
+
+h1 {
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: auto;
+}
+
+
+#shadowBox {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    align-content: center;
+}
+
+.button--netscape {
+    background: var(--c-background-button-netscape);
+    border-color: var(--color-gallery) var(--color-cod-gray) var(--color-cod-gray) var(--color-gallery);
+    border-radius: 0;
+    border-width: 2px;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    font-weight: 700;
+    min-height: 31px;
+    min-width: 88px;
+    margin-top: 20px;
+
+    /* Zoom */
+    zoom: 1.5;
+
+    &:hover,
+    &:focus {
+        outline: 1px dotted var(--c-link);
+    }
+
+    &:active {
+        border-color: var(--color-cod-gray) transparent transparent var(--color-cod-gray);
+        padding: 4px 2px 0px 4px;
+    }
+
+    &::before {
+        align-items: center;
+        display: flex;
+        flex: 0 0 24px;
+        font-size: 14px;
+        height: 23px;
+        justify-content: center;
+        line-height: 0;
+        margin-right: 4px;
+        overflow: hidden;
+        padding-top: 2px;
+        width: 24px;
+    }
+}
+
+h5 {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+    width:60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/*
+Source - https://stackoverflow.com/a/54702294
+Posted by Austen Holland, modified by community. See post 'Timeline' for change history
+Retrieved 2026-03-09, License - CC BY-SA 4.0
+*/
+.rainbow {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+    margin-bottom: 20px;
+}
+
+.rainbow_text_animated {
+    background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff), color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
+    background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-animation: rainbow_animation 6s ease-in-out infinite;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@-webkit-keyframes rainbow_animation {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes rainbow_animation {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+#prog-bar-cont {
+    background: gray;
+    width: 35vw;
+    height: 2.5em;
+    padding: 0.5em;
+    position: relative;
+    margin-top: 50px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.75) inset, 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.75) inset, 0 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+#prog-bar-cont #prog-bar {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 1px 3px rgba(255, 255, 255, 0.75) inset;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 1px 3px rgba(255, 255, 255, 0.75) inset;
+    background: transparent;
+}
+
+#prog-bar-cont #prog-bar:before {
+    border-radius: 50px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) inset, 0 0 5px 2px rgba(255, 255, 255, 0.8) inset;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) inset, 0 0 5px 2px rgba(255, 255, 255, 0.8) inset;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#prog-bar-cont #prog-bar:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    width: 96%;
+    left: 50%;
+    margin-left: -48%;
+    border-radius: 20px;
+    height: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(255, 255, 255, 0.85)), color-stop(120%, transparent));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 30%, transparent 120%);
+}
+
+#prog-bar-cont #prog-bar #background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -webkit-gradient(linear, right top, left top, from(violet), color-stop(#30b3fc), color-stop(#70dc23), color-stop(yellow), color-stop(orange), to(#ff1076));
+    background: linear-gradient(-90deg, violet, #30b3fc, #70dc23, yellow, orange, #ff1076);
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0);
+    transition: all 3s;
+    -webkit-transition: all 3s;
+}
+
+#prog-bar-cont #prog-bar #background:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, #000 10px, #000 20px);
+    opacity: 0.75;
+    mix-blend-mode: overlay;
+    border-radius: 50px;
+}
+
+#prog-bar-cont.active #prog-bar #background {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/* The Modal (background) */
+.modal {
+    margin: auto;
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 250px;
+    /* Location of the box */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 75%;
+    min-width: 800px;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: gray;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    font-size: 28px;
+    margin-left: 96%;
+    background-color: gray;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: darkblue;
+    color: white;
+    margin: auto;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.sexuality{
+    margin: auto;
+    margin-top: 0px;
+    height: 300px;
+}
+
+#label-container{
+    font-size: 10px;
+}
+
