@@ -19,21 +19,15 @@
     --c-link: blue;
 }
 
-.comic-relief-regular {
-    font-family: "Comic Relief", system-ui;
-    font-weight: 400;
+@font-face {
+    font-family: 'Comic Sans MS'; /* Give your font a name */
+    src: url('Comic Sans MS/Comic Sans MS.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
   }
-  
-  .comic-relief-bold {
-    font-family: "Comic Relief", system-ui;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
 
 body {
-    font-family: "Comic Relief", system-ui;
+    font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 100px;
     background:
@@ -119,7 +113,7 @@ h5 {
     color: #fff;
     text-align: center;
     font-size: 18px;
-    font-family: "Comic Relief", system-ui;
+    font-family: "Comic Sans MS", sans-serif;
     width:60%;
     margin: auto;
     margin-bottom: 20px;
@@ -133,7 +127,7 @@ Retrieved 2026-03-09, License - CC BY-SA 4.0
 .rainbow {
     text-align: center;
     font-size: 50px;
-    font-family: "Comic Relief", system-ui;
+    font-family: "Comic Sans MS", sans-serif;
     margin-bottom: 20px;
 }
 
