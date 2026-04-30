@@ -56,7 +56,7 @@ body {
 }
 
 h1 {
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
     margin: auto;
 }
 
@@ -168,7 +168,7 @@ Retrieved 2026-03-09, License - CC BY-SA 4.0
 
 #prog-bar-cont {
     background: gray;
-    width: 35vw;
+    width: 75%;
     height: 2.5em;
     padding: 0.5em;
     position: relative;
@@ -274,7 +274,7 @@ Retrieved 2026-03-09, License - CC BY-SA 4.0
     transform: translateX(-50%);
     top: 0;
     width: 75%;
-    min-width: 800px;
+    min-width: 700px;
     /* Full width */
     height: 100%;
     /* Full height */
@@ -297,7 +297,7 @@ Retrieved 2026-03-09, License - CC BY-SA 4.0
 .close {
     color: white;
     font-size: 28px;
-    margin-left: 96%;
+    margin-left: 94%;
     background-color: gray;
     padding-left: 7px;
     padding-right: 7px;
