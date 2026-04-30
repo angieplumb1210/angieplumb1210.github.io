@@ -8,11 +8,10 @@ let model, webcam, labelContainer, maxPredictions;
 const progBar = document.getElementById("prog-bar-cont");
 // Get the modal
 var modal = document.getElementById("myModal");
+webcam = new tmImage.Webcam(375, 375, true); // width, height, flip
 
 async function startWebcam(){
     // Convenience function to setup a webcam
-    const flip = true; // whether to flip the webcam
-    webcam = new tmImage.Webcam(375, 375, flip); // width, height, flip
     await webcam.setup(); // request access to the webcam
     await webcam.play();
     window.requestAnimationFrame(loop);
