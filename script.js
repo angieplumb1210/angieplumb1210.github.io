@@ -22,12 +22,13 @@ async function startWebcam(){
     webcam.update();
 }
 
-startWebcam(); 
-
 // Load the image model and setup the webcam
 document.getElementById("myBtn").addEventListener("click", async () => {
+
     modal.style.display = "block";
     progBar.style.display = "block";
+    await startWebcam();
+
     const modelURL = URL + "model.json";
     const metadataURL = URL + "metadata.json";
     // load the model and metadata
